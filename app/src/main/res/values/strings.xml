@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LifeCycleExample</string>
+    <string name="lifecycle_examples">LifeCycle Examples!</string>
 </resources>

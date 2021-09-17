@@ -4,12 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ListViewActivity">
 
+        <include layout="@layout/toolbar_layout"/>
+
         <ListView
+            android:layout_below="@+id/toolbar"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:id="@+id/listView"
@@ -17,6 +20,6 @@
             android:layout_height="match_parent"
             tools:listitem="@layout/list_rv_item"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </layout>

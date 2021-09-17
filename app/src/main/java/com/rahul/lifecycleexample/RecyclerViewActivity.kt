@@ -1,16 +1,21 @@
 package com.rahul.lifecycleexample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.toolbar_layout.*
 
 class RecyclerViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_view)
 
-        val recylerView = findViewById<RecyclerView>(R.id.recycler_view)
+        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
 
         val data = arrayListOf<CustomData>()
 
@@ -36,8 +41,44 @@ class RecyclerViewActivity : AppCompatActivity() {
         data.add(CustomData(R.drawable.ic_android, "version 11", "Android 11", "released on 2020", "sdk 30", "initial version of Android operating system"))
 
         val adapter = CustomAdapter(this, data)
-        recylerView.layoutManager = LinearLayoutManager(this)
-        recylerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.widgets_menu -> startWidgetsActivity()
+            R.id.listView_menu -> startListViewActivity()
+            R.id.rv_menu -> Toast.makeText(this, "choose other options please!", Toast.LENGTH_SHORT).show()
+            R.id.cv_menu -> startCustomViewActivity()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun startWidgetsActivity() {
+        val nextScreenIntent = Intent(this, ActivityDesigns::class.java)
+        startActivity(nextScreenIntent)
+    }
+
+    private fun startListViewActivity() {
+        val nextScreenIntent = Intent(this, ListViewActivity::class.java)
+        startActivity(nextScreenIntent)
+    }
+
+    private fun startCustomViewActivity() {
+        val nextScreenIntent = Intent(this, CustomViewActivity::class.java)
+        startActivity(nextScreenIntent)    }
+
+
+    override fun onStart() {
+        super.onStart()
+        setSupportActionBar(toolbar)
+        title = "RecyclerView"
     }
 }

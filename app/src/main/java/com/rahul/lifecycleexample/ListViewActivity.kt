@@ -1,9 +1,14 @@
 package com.rahul.lifecycleexample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.rahul.lifecycleexample.databinding.ActivityListViewBinding
+import kotlinx.android.synthetic.main.toolbar_layout.*
 
 class ListViewActivity : AppCompatActivity() {
 
@@ -38,5 +43,42 @@ class ListViewActivity : AppCompatActivity() {
 
         binding.listView.adapter = ListViewAdapter(this, data)
 
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.widgets_menu -> startWidgetsActivity()
+            R.id.listView_menu -> Toast.makeText(this, "choose other options please!", Toast.LENGTH_SHORT).show()
+            R.id.rv_menu -> startRecyclerViewActivity()
+            R.id.cv_menu -> startCustomViewActivity()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun startWidgetsActivity() {
+        val nextScreenIntent = Intent(this, ActivityDesigns::class.java)
+        startActivity(nextScreenIntent)
+    }
+
+    private fun startRecyclerViewActivity() {
+        val nextScreenIntent = Intent(this, RecyclerViewActivity::class.java)
+        startActivity(nextScreenIntent)
+    }
+
+    private fun startCustomViewActivity() {
+        val nextScreenIntent = Intent(this, CustomViewActivity::class.java)
+        startActivity(nextScreenIntent)    }
+
+
+    override fun onStart() {
+        super.onStart()
+        setSupportActionBar(toolbar)
+        title = "ListView"
     }
 }

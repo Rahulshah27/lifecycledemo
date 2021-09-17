@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ActivityDesigns">
 
-
     <item  android:id="@+id/widgets_menu"
         android:title="Widgets"/>
     <item  android:id="@+id/listView_menu"

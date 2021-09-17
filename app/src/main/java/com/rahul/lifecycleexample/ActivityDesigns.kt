@@ -6,14 +6,13 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.SeekBar
-import android.widget.Toast
+import android.widget.*
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.chip.Chip
 import com.google.android.material.snackbar.Snackbar
+import com.rahul.lifecycleexample.R.*
 import com.rahul.lifecycleexample.databinding.ActivityDesignsBinding
+import kotlinx.android.synthetic.main.toolbar_layout.*
 
 class ActivityDesigns : AppCompatActivity() {
 
@@ -24,8 +23,7 @@ class ActivityDesigns : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_designs)
-
+        binding = DataBindingUtil.setContentView(this, layout.activity_designs)
 
         binding.btnMaterialBtn1.setOnClickListener {
             snackbarDemo()
@@ -35,6 +33,10 @@ class ActivityDesigns : AppCompatActivity() {
         }
         binding.btnMaterialBtn3.setOnClickListener {
             snackbarDemo()
+        }
+
+        binding.fab.setOnClickListener {
+            Snackbar.make(binding.fab, "Fab clicked!", Snackbar.LENGTH_SHORT).show()
         }
 
         binding.toggleButton.setOnClickListener {
@@ -70,11 +72,11 @@ class ActivityDesigns : AppCompatActivity() {
         binding.radioGroupCoice.setOnCheckedChangeListener {
                 group,
                 checkedId ->
-            if(checkedId == R.id.radio1)
+            if(checkedId == id.radio1)
                 Snackbar.make(binding.radio1,"selected : "+ binding.radio1.text, Snackbar.LENGTH_SHORT).show()
-            if (checkedId == R.id.radio2)
+            if (checkedId == id.radio2)
                 Snackbar.make(binding.radio2,"selected : "+ binding.radio2.text, Snackbar.LENGTH_SHORT).show()
-            if (checkedId == R.id.radio3)
+            if (checkedId == id.radio3)
                 Snackbar.make(binding.radio3,"selected : "+ binding.radio3.text, Snackbar.LENGTH_SHORT).show()
         }
 
@@ -124,12 +126,11 @@ class ActivityDesigns : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
-            R.id.widgets_menu -> Toast.makeText(this, "choose other options please!", Toast.LENGTH_SHORT).show()
-            R.id.listView_menu -> startListViewActivity()
-            R.id.rv_menu -> startRecyclerViewActivity()
-            R.id.cv_menu -> startCustomViewActivity()
+            id.widgets_menu -> Toast.makeText(this, "choose other options please!", Toast.LENGTH_SHORT).show()
+            id.listView_menu -> startListViewActivity()
+            id.rv_menu -> startRecyclerViewActivity()
+            id.cv_menu -> startCustomViewActivity()
         }
-
         return super.onOptionsItemSelected(item)
     }
 
@@ -145,5 +146,11 @@ class ActivityDesigns : AppCompatActivity() {
     private fun startListViewActivity() {
         val nextScreenIntent = Intent(this, ListViewActivity::class.java)
         startActivity(nextScreenIntent)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        setSupportActionBar(toolbar)
+        title = "Widgets"
     }
 }

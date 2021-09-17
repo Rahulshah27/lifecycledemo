@@ -34,4 +34,5 @@ class ListViewAdapter(private val context: Activity, private val arrayList: Arra
         return view
 
     }
+
 }

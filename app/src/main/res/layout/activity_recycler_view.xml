@@ -7,8 +7,8 @@
     tools:context=".RecyclerViewActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

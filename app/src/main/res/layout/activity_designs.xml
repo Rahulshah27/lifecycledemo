@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ActivityDesigns"
+        tools:ignore="HardcodedText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".ActivityDesigns">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_material_btn"
+                style="@style/text_style"
+                android:text="material Buttons" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_material_btn1"
+                style="@style/button_style"
+                android:text="Material Buttons" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_material_btn2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Material Buttons"
+                android:layout_margin="@dimen/widget_margin"
+                android:background="@drawable/shape_ract" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_material_btn3"
+                style="@style/button_style"
+                android:drawableLeft="@drawable/ic_image"
+                android:text="@string/btn_material_buttons" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_toggle_btn"
+                style="@style/text_style"
+                android:text="@string/text_toggle_button" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/widget_margin"
+                android:text="@string/btn_togglebutton"
+                android:textOff="@string/off"
+                android:textOn="@string/on"
+                app:layout_constraintEnd_toStartOf="@+id/toggleButton2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_chip_btn"
+                style="@style/text_style"
+                android:text="Chips" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:padding="8dp"
+                android:id="@+id/chip_Group_choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip1"
+                    app:chipBackgroundColor="@android:color/holo_orange_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Checkable" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stroke"
+                    android:textColor="#B71C1C"
+                    app:chipStrokeColor="@android:color/holo_orange_light"
+                    app:chipStrokeWidth="2dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip3"
+                    app:chipCornerRadius="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Corner Radius" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chip Icon"
+                    app:chipIcon="@drawable/ic_image"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close Icon"
+                    app:closeIcon="@drawable/ic_chip" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_switch_btn"
+                style="@style/text_style"
+                android:text="@string/text_switch" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch1"
+                app:useMaterialThemeColors="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/widget_margin"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_input_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/widget_margin"
+                android:fontFamily="@font/roboto"
+                android:text="Text input Layout"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_text"
+                    android:hint="edit text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/widget_margin"
+                android:fontFamily="@font/roboto"
+                android:text="Check Box"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check1"
+                style="@style/checkbox_style"
+                android:text="CheckBox 1" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check2"
+                style="@style/checkbox_style"
+                android:text="CheckBox 2" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check3"
+                style="@style/checkbox_style"
+                android:text="CheckBox 3" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_radio"
+                style="@style/text_style"
+                android:fontFamily="@font/roboto"
+                android:text="Radio Group and Radio Buttons" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_coice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radio1"
+                    style="@style/radio_style"
+                    android:text="RadioButton 1" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radio2"
+                    android:text="Radiobutton 2"
+                    style="@style/radio_style" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radio3"
+                    style="@style/radio_style"
+                    android:text="Radiobutton 3" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_seek"
+                style="@style/text_style"
+                android:text="Seek Bar" />
+
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:max="100"
+                android:outlineAmbientShadowColor="@android:color/holo_orange_light" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_progress"
+                style="@style/text_style"
+                android:text="Progress Bar" />
+
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:indeterminate="true"
+                app:indicatorColor="@android:color/holo_orange_light" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_spinner"
+                style="@style/text_style"
+                android:text="Spinner" />
+
+            <Spinner
+                android:layout_marginLeft="16dp"
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</layout>
+

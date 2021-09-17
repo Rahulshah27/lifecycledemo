@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Toast.makeText(this,"OnCreate is Called!",Toast.LENGTH_SHORT).show()
     }
+    
+    
 
     override fun onStart() {
         super.onStart()

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">@dimen/widget_margin</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/widget_margin</item>
+        <item name="android:fontFamily">"@font/roboto"</item>
+        <item name="android:background">@drawable/shape_oval</item>
+    </style>
+
+    <style name="Button.Orange" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@android:color/holo_orange_light</item>
+    </style>
+
+    <style name="checkbox_style">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="radio_style">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+</resources>

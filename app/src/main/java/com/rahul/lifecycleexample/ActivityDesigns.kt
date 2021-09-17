@@ -1,5 +1,6 @@
 package com.rahul.lifecycleexample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -123,12 +124,26 @@ class ActivityDesigns : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
-            R.id.widgets_menu -> Toast.makeText(this, "text", Toast.LENGTH_SHORT).show()
-            R.id.listView_menu -> Toast.makeText(this, "text", Toast.LENGTH_SHORT).show()
-            R.id.rv_menu -> Toast.makeText(this, "text", Toast.LENGTH_SHORT).show()
-            R.id.cv_menu -> Toast.makeText(this, "text", Toast.LENGTH_SHORT).show()
+            R.id.widgets_menu -> Toast.makeText(this, "choose other options please!", Toast.LENGTH_SHORT).show()
+            R.id.listView_menu -> startListViewActivity()
+            R.id.rv_menu -> startRecyclerViewActivity()
+            R.id.cv_menu -> startCustomViewActivity()
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun startCustomViewActivity() {
+        val nextScreenIntent = Intent(this, CustomViewActivity::class.java)
+        startActivity(nextScreenIntent)    }
+
+    private fun startRecyclerViewActivity() {
+        val nextScreenIntent = Intent(this, RecyclerViewActivity::class.java)
+        startActivity(nextScreenIntent)
+    }
+
+    private fun startListViewActivity() {
+        val nextScreenIntent = Intent(this, ListViewActivity::class.java)
+        startActivity(nextScreenIntent)
     }
 }

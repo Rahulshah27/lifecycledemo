@@ -13,6 +13,9 @@ import kotlinx.android.synthetic.main.d_bottom_sheet.*
 import java.util.*
 
 class ActivityDialog : AppCompatActivity() {
+    private lateinit var listItems: Array<String>
+    private val arrayChecked: BooleanArray = booleanArrayOf(true,false,true,false,false,false)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dialog)
@@ -102,8 +105,7 @@ class ActivityDialog : AppCompatActivity() {
 
     private fun multiChoiceDialog() {
         btn_multi_choice_dialog.setOnClickListener {
-            val listItems = resources.getStringArray(R.array.single_choice_item)
-            val arrayChecked = booleanArrayOf(true,false,true,false,false,false)
+            listItems = resources.getStringArray(R.array.single_choice_item)
             val mAlertDialog = AlertDialog.Builder(this)
             mAlertDialog.apply {
                 setMultiChoiceItems(listItems, arrayChecked) { _, which, isChecked ->

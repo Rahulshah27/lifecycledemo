@@ -5,10 +5,11 @@ import android.app.ProgressDialog
 import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TimePicker
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_dialog.*
+import kotlinx.android.synthetic.main.d_bottom_sheet.*
 import java.util.*
 
 class ActivityDialog : AppCompatActivity() {
@@ -16,25 +17,56 @@ class ActivityDialog : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dialog)
 
+
         simpleDialog1()
         simpleDialog2()
         singleChoiceDialog()
         multiChoiceDialog()
         progressDialog1()
+        progressDialog2()
         datePickerDialog()
         timePickerDialog()
+        bottomDialog()
+    }
+
+    private fun progressDialog2() {
+        btn_progress_dialog2?.setOnClickListener {
+            val visibility = if (progress_2.visibility == View.GONE) {
+                View.VISIBLE
+            } else {
+                View.GONE
+            }
+            progress_2.visibility = visibility
+        }
+    }
+
+    private fun bottomDialog() {
+        btn_bottom_dialog.setOnClickListener {
+            FragmentBottomSheet().also {
+                it.show(supportFragmentManager, "TAG")
+            }
+
+//            val btnSheet = layoutInflater.inflate(R.layout.d_bottom_sheet, null)
+//            val dialog = BottomSheetDialog(this)
+//            dialog.setContentView(btnSheet)
+//            btnSheet.setOnClickListener {
+//                dialog.dismiss()
+//            }
+//
+//            dialog.show()
+        }
     }
 
     private fun timePickerDialog() {
         btn_time_picker_dialog.setOnClickListener {
             val mTimePicker: TimePickerDialog
-            val mcurrentTime = Calendar.getInstance()
-            val hour = mcurrentTime.get(Calendar.HOUR_OF_DAY)
-            val minute = mcurrentTime.get(Calendar.MINUTE)
+            val mCurrentTime = Calendar.getInstance()
+            val hour = mCurrentTime.get(Calendar.HOUR_OF_DAY)
+            val minute = mCurrentTime.get(Calendar.MINUTE)
 
             mTimePicker = TimePickerDialog(this,
-                { _, hourOfDay, minute ->
-                    val selectedTime = String.format("%d : %d", hourOfDay, minute)
+                { _, hourOfDay, mMinute ->
+                    val selectedTime = String.format("Time %d : %d", hourOfDay, mMinute)
                     toast(selectedTime)
                 }, hour, minute, false)
             mTimePicker.show()
@@ -92,7 +124,6 @@ class ActivityDialog : AppCompatActivity() {
             }
         }
     }
-
     private fun toast(message: String) {
         Toast.makeText(this@ActivityDialog, message, Toast.LENGTH_SHORT).show()
     }
@@ -118,11 +149,11 @@ class ActivityDialog : AppCompatActivity() {
                 setMessage("This is a simple message")
                 setIcon(R.drawable.ic_sentiment)
                 setPositiveButton("OK") { _, _ ->
-                    Toast.makeText(this@ActivityDialog, "OK Clicked!", Toast.LENGTH_SHORT).show()
+                    toast("OK Clicked!")
                 }
                 setNegativeButton("Cancel") { dialog, _ ->
                     dialog.dismiss()
-                    Toast.makeText(this@ActivityDialog, "Cancel Clicked!", Toast.LENGTH_SHORT).show()
+                    toast("Cancel Clicked!")
                 }
                 show()
             }
@@ -139,11 +170,11 @@ class ActivityDialog : AppCompatActivity() {
                 }
                 setPositiveButton("Submit") { dialog, _ ->
                     val position = (dialog as AlertDialog).listView.checkedItemPosition
-
                     if (position != -1) {
-                        val selectedItem = listItems[position]
-                        Toast.makeText(this@ActivityDialog, "$selectedItem submitted", Toast.LENGTH_SHORT).show()
-                        dialog.dismiss()
+                        listItems[position].also {
+                            toast("$it submitted")
+                            dialog.dismiss()
+                        }
                     }
                 }
                 setCancelable(false)

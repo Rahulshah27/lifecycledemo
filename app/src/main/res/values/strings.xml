@@ -24,16 +24,21 @@
     <string name="date_picker_dialog">Date Picker Dialog</string>
     <string name="time_picker_dialog">Time Picker Dialog</string>
     <string name="bottom_dialog">Bottom Dialog</string>
+    <string name="rename_file">Rename File</string>
+    <string name="submit">Submit</string>
 
-<!--    single choice -->
+    <!--    single choice -->
 
-        <string-array name="single_choice_item">
-            <item>Single Choice 1</item>
-            <item>Single Choice 2</item>
-            <item>Single Choice 3</item>
-            <item>Single Choice 4</item>
-            <item>Single Choice 5</item>
-            <item>Single Choice 6</item>
-        </string-array>
+    <string-array name="single_choice_item">
+        <item>Single Choice 1</item>
+        <item>Single Choice 2</item>
+        <item>Single Choice 3</item>
+        <item>Single Choice 4</item>
+        <item>Single Choice 5</item>
+        <item>Single Choice 6</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="file_name">File Name</string>
 
 </resources>

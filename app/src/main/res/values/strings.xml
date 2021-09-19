@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">LifeCycleExample</string>
     <string name="lifecycle_examples">LifeCycle Examples!</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="btn_togglebutton">ToggleButton</string>
+    <string name="text_toggle_button">Toggle Button</string>
+    <string name="btn_material_buttons">material Buttons</string>
+    <string name="text_switch">Switch</string>
+    <string name="title_activity_test">Test</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_design_components">DesignComponents</string>
 </resources>

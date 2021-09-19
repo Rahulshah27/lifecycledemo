@@ -17,4 +17,23 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_design_components">DesignComponents</string>
+    <string name="simple_dialog">Simple Dialog</string>
+    <string name="single_choice_dialog">Single Choice Dialog</string>
+    <string name="multi_choice_dialog">Multi Choice Dialog</string>
+    <string name="progress_dialog">Progress Dialog</string>
+    <string name="date_picker_dialog">Date Picker Dialog</string>
+    <string name="time_picker_dialog">Time Picker Dialog</string>
+    <string name="bottom_dialog">Bottom Dialog</string>
+
+<!--    single choice -->
+
+        <string-array name="single_choice_item">
+            <item>Single Choice 1</item>
+            <item>Single Choice 2</item>
+            <item>Single Choice 3</item>
+            <item>Single Choice 4</item>
+            <item>Single Choice 5</item>
+            <item>Single Choice 6</item>
+        </string-array>
+
 </resources>

@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ActivityDialog">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        tools:context=".ActivityDialog">
+
+        <Button
+            android:id="@+id/btn_simple_dialog1"
+            style="@style/btn_dialog"
+            android:backgroundTint="#C62828"
+            android:text="@string/simple_dialog"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/btn_simple_dialog2"
+            style="@style/btn_dialog"
+            android:backgroundTint="#D11F45"
+            android:text="@string/simple_dialog" />
+
+        <Button
+            android:id="@+id/btn_single_choice_dialog"
+            style="@style/btn_dialog"
+            android:backgroundTint="#0277BD"
+            android:text="@string/single_choice_dialog" />
+
+        <Button
+            android:id="@+id/btn_multi_choice_dialog"
+            style="@style/btn_dialog"
+            android:backgroundTint="#4527A0"
+            android:text="@string/multi_choice_dialog" />
+
+        <Button
+            android:id="@+id/btn_progress_dialog1"
+            style="@style/btn_dialog"
+            android:backgroundTint="#1565C0"
+            android:text="@string/progress_dialog"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/btn_progress_dialog2"
+            style="@style/btn_dialog"
+            android:backgroundTint="#00838F"
+            android:text="@string/progress_dialog" />
+
+        <Button
+            android:id="@+id/btn_date_picker_dialog"
+            style="@style/btn_dialog"
+            android:backgroundTint="#A4A32B"
+            android:text="@string/date_picker_dialog"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_time_picker_dialog"
+            style="@style/btn_dialog"
+            android:backgroundTint="#5CD42C"
+            android:text="@string/time_picker_dialog"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_bottom_dialog"
+            style="@style/btn_dialog"
+            android:backgroundTint="#EF6C00"
+            android:text="@string/bottom_dialog"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+</ScrollView>

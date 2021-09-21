@@ -6,20 +6,23 @@ import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_dialog.*
 import kotlinx.android.synthetic.main.d_bottom_sheet.*
+import kotlinx.android.synthetic.main.dialog_custom_layout.*
 import java.util.*
 
 class ActivityDialog : AppCompatActivity() {
+
     private lateinit var listItems: Array<String>
     private val arrayChecked: BooleanArray = booleanArrayOf(true,false,true,false,false,false)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dialog)
-
 
         simpleDialog1()
         simpleDialog2()
@@ -57,6 +60,26 @@ class ActivityDialog : AppCompatActivity() {
 //            }
 //
 //            dialog.show()
+        }
+    }
+
+    private fun simpleDialog1() {
+        btn_simple_dialog1.setOnClickListener {
+            val dialogView = layoutInflater.inflate(R.layout.dialog_custom_layout, null)
+            val mAlertDialog = AlertDialog.Builder(this)
+            mAlertDialog.apply {
+                setView(dialogView)
+                show()
+            }
+                val btnSubmit = dialogView.findViewById<Button>(R.id.btn_custom_submit)
+                val edName = dialogView.findViewById<EditText>(R.id.ed_name)
+                btnSubmit.setOnClickListener {
+                   if (edName.text.isEmpty()) {
+                        toast("please enter something!")
+                    }
+                   else toast("${edName.text.trim()} Submitted!")
+                }
+
         }
     }
 
@@ -105,20 +128,22 @@ class ActivityDialog : AppCompatActivity() {
 
     private fun multiChoiceDialog() {
         btn_multi_choice_dialog.setOnClickListener {
-            listItems = resources.getStringArray(R.array.single_choice_item)
+            listItems = resources.getStringArray(R.array.multiple_choice_item)
             val mAlertDialog = AlertDialog.Builder(this)
             mAlertDialog.apply {
+                var items = ""
+                setTitle("Choose multiple Items")
                 setMultiChoiceItems(listItems, arrayChecked) { _, which, isChecked ->
                     arrayChecked[which] = isChecked
-
                 }
                 setPositiveButton("Submit") {_, _ ->
                     for (i in 0 until listItems.size) {
                         val checked = arrayChecked[i]
                         if (checked) {
-                            toast("${listItems[i]} is checked \n")
+                            items += listItems[i] + "\n"
                         }
                     }
+                    toast("items: $items is checked!")
                 }
                 setCancelable(false)
                 create()
@@ -130,18 +155,6 @@ class ActivityDialog : AppCompatActivity() {
         Toast.makeText(this@ActivityDialog, message, Toast.LENGTH_SHORT).show()
     }
 
-
-    private fun simpleDialog1() {
-        btn_simple_dialog1.setOnClickListener {
-            val mAlertDialog = AlertDialog.Builder(this)
-            mAlertDialog.apply {
-                setTitle("Simple Dialog")
-                setMessage("This is a simple message")
-                setIcon(R.drawable.ic_sentiment)
-                show()
-            }
-        }
-    }
 
     private fun simpleDialog2() {
         btn_simple_dialog2.setOnClickListener {
@@ -185,7 +198,6 @@ class ActivityDialog : AppCompatActivity() {
             }
         }
     }
-
 
 
 }

@@ -38,7 +38,7 @@
         <item>Single Choice 6</item>
     </string-array>
 
-<!--    multiple choose-->
+    <!--    multiple choose-->
     <string-array name="multiple_choice_item">
         <item>Multiple Choice 1</item>
         <item>Multiple Choice 2</item>

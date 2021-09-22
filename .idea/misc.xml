@@ -20,11 +20,14 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14635416666666667" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1609375" />
         <entry key="app/src/main/res/layout/activity_recycler_view.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_session4.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.165625" />
         <entry key="app/src/main/res/layout/d_bottom_sheet.xml" value="0.5145228215767634" />
+        <entry key="app/src/main/res/layout/d_custom_session4.xml" value="0.25" />
         <entry key="app/src/main/res/layout/dialog_custom_layout.xml" value="0.1609375" />
         <entry key="app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.14635416666666667" />
         <entry key="app/src/main/res/layout/list_rv_item.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/list_rv_items_rcud.xml" value="0.33" />
         <entry key="app/src/main/res/layout/progress_laout.xml" value="0.165625" />
         <entry key="app/src/main/res/layout/toolbar_layout.xml" value="0.1140625" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.165625" />

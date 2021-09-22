@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/m_10"
+    android:layout_marginTop="@dimen/m_10"
+    android:layout_marginRight="@dimen/m_10"
+    android:layout_marginBottom="@dimen/m_10"
+    app:cardCornerRadius="@dimen/m_10"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:padding="@dimen/m_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Android version name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:padding="@dimen/m_16"
+            android:id="@+id/spin_cud"
+            android:layout_marginTop="@dimen/m_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:padding="@dimen/m_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Released On" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:padding="@dimen/m_16"
+            android:id="@+id/minimum_sdk_crud"
+            android:layout_marginTop="@dimen/m_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:padding="@dimen/m_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:hint="Description" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/m_8"
+            android:layout_marginBottom="@dimen/m_8"
+            android:padding="@dimen/m_16"
+            android:id="@+id/btn_crud_add"
+            android:layout_marginLeft="@dimen/m_8"
+            android:layout_marginRight="@dimen/m_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD"/>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

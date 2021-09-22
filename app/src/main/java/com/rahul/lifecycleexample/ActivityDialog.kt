@@ -33,6 +33,7 @@ class ActivityDialog : AppCompatActivity() {
         datePickerDialog()
         timePickerDialog()
         bottomDialog()
+
     }
 
     private fun progressDialog2() {
@@ -69,17 +70,17 @@ class ActivityDialog : AppCompatActivity() {
             val mAlertDialog = AlertDialog.Builder(this)
             mAlertDialog.apply {
                 setView(dialogView)
-                show()
-            }
                 val btnSubmit = dialogView.findViewById<Button>(R.id.btn_custom_submit)
                 val edName = dialogView.findViewById<EditText>(R.id.ed_name)
                 btnSubmit.setOnClickListener {
-                   if (edName.text.isEmpty()) {
+                    if (edName.text.isEmpty()) {
                         toast("please enter something!")
+                    } else {
+                        toast("${edName.text.trim()} Submitted!")
                     }
-                   else toast("${edName.text.trim()} Submitted!")
                 }
-
+                show()
+            }
         }
     }
 

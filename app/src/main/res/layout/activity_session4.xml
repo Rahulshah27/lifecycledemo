@@ -8,10 +8,10 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/list_rv_items_rcud"
         android:id="@+id/recycler_crud"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/list_rv_items_rcud"/>
+        android:layout_height="wrap_content" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -20,7 +20,6 @@
         android:layout_margin="@dimen/m_16"
         android:layout_width="wrap_content"
         app:srcCompat="@drawable/ic_add"
-        android:layout_height="wrap_content"
-        android:contentDescription="Add items" />
+        android:layout_height="wrap_content" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

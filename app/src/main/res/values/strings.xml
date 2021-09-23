@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LifeCycleExample</string>
+    <string name="app_name">Session 4 Task</string>
     <string name="lifecycle_examples">LifeCycle Examples!</string>
     <string name="off">Off</string>
     <string name="on">On</string>
@@ -48,11 +48,34 @@
         <item>Multiple Choice 6</item>
     </string-array>
 
+    <string-array name="version_item">
+        <item>Version 4.4</item>
+        <item>version 5.0</item>
+        <item>version 6.0</item>
+        <item>version 7.0</item>
+        <item>version 8</item>
+        <item>version 9</item>
+        <item>version 10</item>
+        <item>version 11</item>
+    </string-array>
+
+    <string-array name="sdk_item">
+        <item>Sdk 9</item>
+        <item>Sdk 10</item>
+        <item>Sdk 12</item>
+        <item>Sdk 17</item>
+        <item>Sdk 26</item>
+        <item>Sdk 28</item>
+        <item>Sdk 29</item>
+        <item>Sdk 30</item>
+    </string-array>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="file_name">File Name</string>
     <string name="enter_your_name">Enter Your Name</string>
     <string name="custom_name">Name</string>
+    <string name="add_items">Add items</string>
 
 </resources>

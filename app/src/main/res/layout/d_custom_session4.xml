@@ -25,7 +25,8 @@
                 android:id="@+id/d_version_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Android version name" />
+                android:background="@color/white"
+                android:hint="@string/android_version_name" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,7 +47,8 @@
                 android:id="@+id/d_released"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Released On" />
+                android:background="@color/white"
+                android:hint="@string/released_on" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,7 +70,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="2"
-                android:hint="Description" />
+                android:background="@color/white"
+                android:hint="@string/description" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

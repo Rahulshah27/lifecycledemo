@@ -77,5 +77,8 @@
     <string name="enter_your_name">Enter Your Name</string>
     <string name="custom_name">Name</string>
     <string name="add_items">Add items</string>
+    <string name="android_version_name">Android version name</string>
+    <string name="description">Description</string>
+    <string name="released_on">Released On</string>
 
 </resources>

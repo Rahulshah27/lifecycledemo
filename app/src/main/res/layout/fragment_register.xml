@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/padding_card"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/regFrag"
+        android:layout_height="match_parent"
+        tools:context=".FragmentLogin">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:textSize="@dimen/login_text"
+                    android:textStyle="bold"
+
+                    android:padding="22dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size"
+                    android:text="User Name"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_16_dp"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/edit_text"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/bg_login"
+                    android:id="@+id/edtUsername"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size"
+                    android:text="Password"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_16_dp"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:padding="@dimen/edit_text"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/bg_login"
+                    android:id="@+id/edtPass"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size"
+                    android:text="Confirm Password"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/padding_16_dp"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:padding="@dimen/edit_text"
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/bg_login"
+                    android:maxLines="1"
+                    android:id="@+id/edtConfirmPass"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn"
+                    android:layout_marginTop="@dimen/margint_top"
+                    style="@style/ButtonStyle"
+                    android:id="@+id/registerBtn"
+                    android:text="Register"
+                    android:layout_marginBottom="@dimen/padding_16_dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size"/>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/padding_16_dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:text="Already have an account?"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:gravity="center"
+
+                app:layout_constraintEnd_toStartOf="@+id/signupTxt"
+                android:textColor="@color/black"
+                android:id="@+id/don_t"
+                android:padding="4dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:text="Login Here"
+                android:id="@+id/loginTxt"
+
+                android:padding="4dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"
+
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

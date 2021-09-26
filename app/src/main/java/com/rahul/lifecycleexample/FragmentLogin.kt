@@ -37,11 +37,11 @@ class FragmentLogin : Fragment() {
 
         binding.loginBtn.setOnClickListener {
             if (binding.edtUsername.text.toString().trim().isEmpty()){
-                binding.edtUsername.error = "User name cannot be empty!"
+                binding.edtUsername.error = "Username is required"
                 return@setOnClickListener
             }
             if (binding.edtUsername.text.toString().trim().isEmpty()){
-                binding.edtPassword.error = "Password cannot be empty!"
+                binding.edtPassword.error = "Password is required"
                 return@setOnClickListener
             }
             val username = binding.edtUsername.text.toString().trim()
@@ -51,10 +51,10 @@ class FragmentLogin : Fragment() {
                 val sName = sharedPreference!!.getString("username", "")
                 val sPassword = sharedPreference!!.getString("password","")
                 if (username != sName){
-                    Snackbar.make(binding.loginFragment, "User not registered", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(binding.loginFragment, "Invalid User", Snackbar.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }else if (password != sPassword){
-                    Snackbar.make(binding.loginFragment, "Invalid user credentials",Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(binding.loginFragment, "Invalid Password",Snackbar.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }else{
                     Snackbar.make(binding.loginFragment, "Logged in successfully", Snackbar.LENGTH_SHORT).show()

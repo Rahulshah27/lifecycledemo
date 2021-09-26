@@ -29,11 +29,13 @@ class FragmentFirst : Fragment(R.layout.fragment_first) {
 
         }
         val args = this.arguments
-        val recData = args?.getString("data")
+        val data = args?.getString("data")
 
-        if (recData.equals("")){        textView1.text = "First Fragment"}
+        if (data.isNullOrEmpty()){
+            textView1.text = "First Fragment"
+        }
         else
-            textView1.text = recData
+            textView1.text = data
     }
 
 

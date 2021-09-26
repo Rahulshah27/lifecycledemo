@@ -31,7 +31,9 @@ class FragmentSecond : Fragment(R.layout.fragment_second) {
         val args = this.arguments
         val recData = args?.getString("data")
 
-        if (recData.equals("")){        textView2.text = "Second Fragment"}
+        if (recData.isNullOrEmpty()){
+            textView2.text = "Second Fragment"
+        }
         else
             textView2.text = recData
     }

@@ -12,4 +12,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="padding_card">22dp</dimen>
     <dimen name="margint_top">25dp</dimen>
+    <dimen name="m_30">30dp</dimen>
 </resources>

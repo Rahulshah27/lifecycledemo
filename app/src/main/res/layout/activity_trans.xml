@@ -13,6 +13,14 @@
         android:layout_weight="5"
         android:layout_marginTop="@dimen/m_10"
         />
+
+    <View
+        android:layout_marginTop="@dimen/m_30"
+        android:layout_marginBottom="@dimen/m_30"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container2View"
         android:layout_width="match_parent"

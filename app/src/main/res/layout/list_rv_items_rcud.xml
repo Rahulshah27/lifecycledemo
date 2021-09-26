@@ -84,12 +84,12 @@
             android:layout_below="@+id/info">
 
             <ImageView
-                android:id="@+id/mMenus"
+                android:id="@+id/m_delete1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:padding="@dimen/m_8"
-                app:srcCompat="@drawable/ic_more" />
+                app:srcCompat="@drawable/ic_delete" />
 
         </RelativeLayout>
     </RelativeLayout>

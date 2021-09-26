@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Session4Activity">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        tools:listitem="@layout/list_rv_items_rcud"
-        android:id="@+id/recycler_crud"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        tools:context=".Session4Activity">
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_recycle"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/m_16"
-        android:layout_width="wrap_content"
-        app:srcCompat="@drawable/ic_add"
-        android:layout_height="wrap_content" />
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/list_rv_items_rcud"
+            android:id="@+id/rvCrud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_recycle"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/m_16"
+            android:layout_width="wrap_content"
+            app:srcCompat="@drawable/ic_add"
+            android:layout_height="wrap_content" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+

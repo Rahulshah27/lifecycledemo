@@ -28,9 +28,13 @@ class FragmentRegister : Fragment() {
     }
 
     private fun initView() {
-        sharedPreference = activity?.applicationContext?.getSharedPreferences(SHARED_PREFER_NAME, SHARED_PREFER_MODE)
+        binding.tvLogin.setOnClickListener {
+            (activity as AuthActivity).addReplaceFragment(FragmentLogin(), 1, "fragmentRegister")
+        }
 
+        sharedPreference = activity?.applicationContext?.getSharedPreferences(SHARED_PREFER_NAME, SHARED_PREFER_MODE)
         editor = sharedPreference?.edit()
+
 
         binding.registerBtn.setOnClickListener {
             if (binding.edtUsername.text.toString().trim().isEmpty()){
@@ -56,8 +60,7 @@ class FragmentRegister : Fragment() {
 
             editor?.apply()
             activity?.supportFragmentManager?.popBackStack()
-            Snackbar.make(binding.regFrag, "Registered successfully! Please login",Snackbar.LENGTH_SHORT).show()
-
+            Snackbar.make(binding.regFrag, "Registered successfully!",Snackbar.LENGTH_SHORT).show()
 
         }
 

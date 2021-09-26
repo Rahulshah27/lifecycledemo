@@ -8,19 +8,13 @@ import androidx.fragment.app.FragmentTransaction
 import kotlinx.android.synthetic.main.activity_auth.*
 
 class AuthActivity : AppCompatActivity() {
-    val fragmentmanger: FragmentManager = supportFragmentManager
-    val fragTransaction: FragmentTransaction = fragmentmanger.beginTransaction()
+    val fragmentManger: FragmentManager = supportFragmentManager
+    val fragmentTransaction: FragmentTransaction = fragmentManger.beginTransaction()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
 
-// add rowLayout to the root layout somewhere here
-
-// add rowLayout to the root layout somewhere here
-
-
         addReplaceFragment(FragmentLogin(), 1, "fragment")
-
     }
     fun addReplaceFragment(fragment: Fragment?, addOrReplace: Int, backStackValue:String) {
         val manager = supportFragmentManager

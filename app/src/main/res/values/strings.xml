@@ -80,5 +80,17 @@
     <string name="android_version_name">Android version name</string>
     <string name="description">Description</string>
     <string name="released_on">Released On</string>
+    <string name="login">Login</string>
+    <string name="user_name">User name</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="password">Enter Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_an_account">don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login_here">Login Here</string>
+    <string name="already_have_an_account">Already have an account?</string>
 
 </resources>

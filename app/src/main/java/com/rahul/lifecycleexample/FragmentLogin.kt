@@ -23,15 +23,13 @@ class FragmentLogin : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         _binding = FragmentLoginBinding.inflate(inflater,container,false)
         initView()
         return binding.root
-
     }
 
     private fun initView(){
-        binding.signupTxt.setOnClickListener {
+        binding.tvSign.setOnClickListener {
             (activity as AuthActivity).addReplaceFragment(FragmentRegister(), 2, "fragmentLogin")
         }
         sharedPreference = activity?.getSharedPreferences(SHARED_PREFER_NAME, SHARED_PREFER_MODE)
@@ -46,28 +44,26 @@ class FragmentLogin : Fragment() {
                 binding.edtPassword.error = "Password cannot be empty!"
                 return@setOnClickListener
             }
-            val userName = binding.edtUsername.text.toString().trim()
+            val username = binding.edtUsername.text.toString().trim()
             val password = binding.edtPassword.text.toString().trim()
             if (sharedPreference!!.contains("username") && sharedPreference!!.contains("password"))
             {
-                val uName = sharedPreference!!.getString("username", "")
-                val uPassword = sharedPreference!!.getString("password","")
-                if (!userName.equals(uName)){
-                    Snackbar.make(binding.mainFrag, "User not registered", Snackbar.LENGTH_SHORT).show()
+                val sName = sharedPreference!!.getString("username", "")
+                val sPassword = sharedPreference!!.getString("password","")
+                if (username != sName){
+                    Snackbar.make(binding.loginFragment, "User not registered", Snackbar.LENGTH_SHORT).show()
                     return@setOnClickListener
-                }else if (!password.equals(uPassword)){
-                    Snackbar.make(binding.mainFrag, "Invalid user credentials",Snackbar.LENGTH_SHORT).show()
+                }else if (password != sPassword){
+                    Snackbar.make(binding.loginFragment, "Invalid user credentials",Snackbar.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }else{
-                    Snackbar.make(binding.mainFrag, "Logged in successfully", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(binding.loginFragment, "Logged in successfully", Snackbar.LENGTH_SHORT).show()
                     startActivity(Intent(context, MainActivity::class.java))
                     activity?.finish()
 
                 }
             }
         }
-
-
     }
     override fun onDestroyView() {
         super.onDestroyView()

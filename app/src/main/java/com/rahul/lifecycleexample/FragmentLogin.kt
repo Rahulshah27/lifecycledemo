@@ -58,7 +58,7 @@ class FragmentLogin : Fragment() {
                     return@setOnClickListener
                 }else{
                     Snackbar.make(binding.loginFragment, "Logged in successfully", Snackbar.LENGTH_SHORT).show()
-                    startActivity(Intent(context, MainActivity::class.java))
+                    startActivity(Intent(context, ActivityTrans::class.java))
                     activity?.finish()
 
                 }

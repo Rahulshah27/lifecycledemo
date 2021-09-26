@@ -92,5 +92,10 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="login_here">Login Here</string>
     <string name="already_have_an_account">Already have an account?</string>
+    <string name="fragment_one">Fragment One</string>
+    <string name="enter_something">Enter Something</string>
+    <string name="sent_to_fragment_two">Sent to fragment Two</string>
+    <string name="send_to_fragment_one">Send to Fragment One</string>
+    <string name="fragment_two">Fragment Two</string>
 
 </resources>

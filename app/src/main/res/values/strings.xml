@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">LifeCycleExample</string>
     <string name="lifecycle_examples">LifeCycle Examples!</string>
+
+
+    <string name="send">send</string>
+    <string name="chats">Chats</string>
+    <string name="status">Status</string>
+    <string name="call">Call</string>
+    <string name="title_vp">Slider Activity</string>
+    <string name="title_vp_with_tl">Tab Activity</string>
 </resources>
